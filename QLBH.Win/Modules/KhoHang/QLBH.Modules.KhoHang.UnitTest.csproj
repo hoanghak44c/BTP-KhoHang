@@ -1,0 +1,224 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15A85058-DB09-4C1C-9141-C9CBB28830C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBanHang</RootNamespace>
+    <AssemblyName>QLBanHang</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <StartupObject>QLBanHang.Program</StartupObject>
+    <ManifestCertificateThumbprint>7594B1A05527A26AEDD64E6C5781ADB2C2DC26F0</ManifestCertificateThumbprint>
+    <ManifestKeyFile>QLBanHang_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>D:\Projects\QLBanHang\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\DevExpress.Data.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\DevExpress.Utils.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\DevExpress.XtraBars.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\DevExpress.XtraEditors.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="QLBanHang.Modules.BanHang, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.DanhMuc, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.HeThong, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\TranAnh\HeThong\QLBanHang.Modules.HeThong.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBH.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\QLBH.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBH.Core, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\QLBH.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\frmMain.cs">
+      <Link>frmMain.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\frmMain.designer.cs">
+      <Link>frmMain.designer.cs</Link>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="TestSystem\BCBanHangTestSystem.cs" />
+    <Compile Include="TestSystem\TestToNote.cs" />
+    <Compile Include="TestSystem\frmTestLoadData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestSystem\frmTestLoadData.Designer.cs">
+      <DependentUpon>frmTestLoadData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestSystem\frmDieuChuyenSystemTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestSystem\frmDieuChuyenSystemTest.Designer.cs">
+      <DependentUpon>frmDieuChuyenSystemTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestSystem\frmTestDocSoTon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestSystem\frmTestDocSoTon.Designer.cs">
+      <DependentUpon>frmTestDocSoTon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestSystem\TestDieuChuyen.cs" />
+    <Compile Include="TestUnits\frmCapNhatTonDauKyTestUnit.cs" />
+    <Compile Include="TestUnits\frmThongKeTonSanPham.cs" />
+    <Compile Include="TestUnits\frmListChungTuNhapTestUnit.cs" />
+    <Compile Include="TestUnits\frmXacNhanNhapThanhPhanTestUnits.cs" />
+    <Compile Include="TestUnits\ListChungTuNhapTestUnits.cs" />
+    <Compile Include="TestUnits\misTestUnit.cs" />
+    <Compile Include="TestUnits\NhapXuatNoiBoTestUnit.cs" />
+    <Compile Include="TestUnits\XuatNhapDieuChuyenTestUnit.cs" />
+    <Compile Include="TestUnits\XuatTieuHaoTestUnit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="QLBH.Modules.KhoHang.csproj">
+      <Project>{9FE0E7E9-5724-477E-8CE2-25587E91C29A}</Project>
+      <Name>QLBH.Modules.KhoHang</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\frmMain.resx">
+      <Link>frmMain.resx</Link>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="TestSystem\frmTestLoadData.resx">
+      <DependentUpon>frmTestLoadData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestSystem\frmDieuChuyenSystemTest.resx">
+      <DependentUpon>frmDieuChuyenSystemTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestSystem\frmTestDocSoTon.resx">
+      <DependentUpon>frmTestDocSoTon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(TargetDir)Help"
+copy "..\..\..\..\Help\HDSD_QLBH.chm" "$(TargetDir)\Help"
+mkdir "$(TargetDir)Temp"
+copy "$(ProjectDir)Temp\*.*" "$(TargetDir)\Temp"
+mkdir "$(TargetDir)Images"
+copy "..\..\..\..\Images\bg.jpg" "$(TargetDir)\Images"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

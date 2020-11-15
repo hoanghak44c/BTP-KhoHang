@@ -1,0 +1,111 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design", "Design", "{61DD1B3F-1998-4BF6-B33F-4A8F69B5844B}"
+	ProjectSection(SolutionItems) = preProject
+		QLBH.Documents\Design\QLBanHang-TKe.rp = QLBH.Documents\Design\QLBanHang-TKe.rp
+		QLBH.Documents\Design\QLBanHang.mmap = QLBH.Documents\Design\QLBanHang.mmap
+	EndProjectSection
+	ProjectSection(FolderStartupServices) = postProject
+		{967B4E0D-AD0C-4609-AB67-0FA40C0206D8} = {967B4E0D-AD0C-4609-AB67-0FA40C0206D8}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QLBH.Documents", "QLBH.Documents", "{79DBE5F4-4F51-46C4-9DD1-B5C4C435CE5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plan", "Plan", "{6031A04D-330F-4161-BCA8-38B0DA64EB74}"
+	ProjectSection(SolutionItems) = preProject
+		QLBH.Documents\Plan\Plan - Test - 92HBT .xls = QLBH.Documents\Plan\Plan - Test - 92HBT .xls
+		QLBH.Documents\Plan\Plan - Test.xls = QLBH.Documents\Plan\Plan - Test.xls
+		QLBH.Documents\Plan\Plan - Trien khai - 0606.xls = QLBH.Documents\Plan\Plan - Trien khai - 0606.xls
+		QLBH.Documents\Plan\Plan - Trien khai.xls = QLBH.Documents\Plan\Plan - Trien khai.xls
+		QLBH.Documents\Plan\Plan.xls = QLBH.Documents\Plan\Plan.xls
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{89862567-F49C-41F8-AE51-E7AEE041740D}"
+	ProjectSection(SolutionItems) = preProject
+		QLBH.Documents\Docs\HDSD_QLBH.doc = QLBH.Documents\Docs\HDSD_QLBH.doc
+		QLBH.Documents\Docs\Huong dan cai dat va cap nhat phan mem.doc = QLBH.Documents\Docs\Huong dan cai dat va cap nhat phan mem.doc
+		QLBH.Documents\Docs\Quy trinh nghiep vu (FRT-draft)_10062010.doc = QLBH.Documents\Docs\Quy trinh nghiep vu (FRT-draft)_10062010.doc
+		QLBH.Documents\Docs\Quy trinh QLBH_BangGia_0410.doc = QLBH.Documents\Docs\Quy trinh QLBH_BangGia_0410.doc
+		QLBH.Documents\Docs\Quy trinh QLBH_Draft_2509.doc = QLBH.Documents\Docs\Quy trinh QLBH_Draft_2509.doc
+		QLBH.Documents\Docs\TLHD Xuat gop HD.doc = QLBH.Documents\Docs\TLHD Xuat gop HD.doc
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{D550FEB1-9DAD-4C30-98F4-0C251F195A52}"
+	ProjectSection(SolutionItems) = preProject
+		QLBH.Documents\Template\Temp_BangGia.xls = QLBH.Documents\Template\Temp_BangGia.xls
+		QLBH.Documents\Template\Temp_InEmei.xls = QLBH.Documents\Template\Temp_InEmei.xls
+		QLBH.Documents\Template\Temp_TonDauKy.xls = QLBH.Documents\Template\Temp_TonDauKy.xls
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{9D7CA96C-30A4-4E3C-89E0-4AB61CBFB360}"
+	ProjectSection(SolutionItems) = preProject
+		QLBH.Documents\Deploy\HDTrien khai.xls = QLBH.Documents\Deploy\HDTrien khai.xls
+		QLBH.Documents\Deploy\Quy trinh trien khai.mmap = QLBH.Documents\Deploy\Quy trinh trien khai.mmap
+		QLBH.Documents\Deploy\QuyTrinhTrienKhai.mmap = QLBH.Documents\Deploy\QuyTrinhTrienKhai.mmap
+		QLBH.Documents\Deploy\Van de khi trien khai.mmap = QLBH.Documents\Deploy\Van de khi trien khai.mmap
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLBH.Modules.KhoHang", "..\QLBH.Win\Modules\KhoHang\QLBH.Modules.KhoHang.csproj", "{9FE0E7E9-5724-477E-8CE2-25587E91C29A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLBH.Modules.KhoHang.UnitTest", "..\QLBH.Win\Modules\KhoHang\QLBH.Modules.KhoHang.UnitTest.csproj", "{15A85058-DB09-4C1C-9141-C9CBB28830C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLBH.Common", "..\QLBH.Common\QLBH.Common.csproj", "{D8FDE99A-C8B2-4585-BBBA-D021ED285554}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{8BB15248-23E5-4BD1-AC41-74A35DA731BA}"
+	ProjectSection(SolutionItems) = preProject
+		..\QLBH.Documents\References\BarcodeLib.dll = ..\QLBH.Documents\References\BarcodeLib.dll
+		..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll = ..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll
+		..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.dll = ..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.dll
+		..\QLBH.Documents\References\QLBH.Core.dll = ..\QLBH.Documents\References\QLBH.Core.dll
+	EndProjectSection
+EndProject
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "QLBH.Database", "..\QLBH.Database\Oracle\KhoHang\QLBH.Database.dbp", "{C7709BE8-4328-40E7-905B-1296EE32F628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLBH.Core", "..\QLBH.Core\QLBH.Core.csproj", "{FDC03BE7-C630-40E2-B665-69E92A1DFB9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLBH.Barcode", "..\QLBH.Barcode\QLBH.Barcode.csproj", "{F8646414-0C9C-49BB-9DA3-3923BF78A398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLBH.WebServiceCSharp", "..\QLBH.WebServiceCSharp\QLBH.WebServiceCSharp.csproj", "{FB6F939D-F087-473C-B39E-4BC9B8FEF707}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FE0E7E9-5724-477E-8CE2-25587E91C29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE0E7E9-5724-477E-8CE2-25587E91C29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE0E7E9-5724-477E-8CE2-25587E91C29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE0E7E9-5724-477E-8CE2-25587E91C29A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A85058-DB09-4C1C-9141-C9CBB28830C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A85058-DB09-4C1C-9141-C9CBB28830C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8FDE99A-C8B2-4585-BBBA-D021ED285554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8FDE99A-C8B2-4585-BBBA-D021ED285554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8FDE99A-C8B2-4585-BBBA-D021ED285554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8FDE99A-C8B2-4585-BBBA-D021ED285554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC03BE7-C630-40E2-B665-69E92A1DFB9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC03BE7-C630-40E2-B665-69E92A1DFB9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC03BE7-C630-40E2-B665-69E92A1DFB9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC03BE7-C630-40E2-B665-69E92A1DFB9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6F939D-F087-473C-B39E-4BC9B8FEF707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6F939D-F087-473C-B39E-4BC9B8FEF707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6F939D-F087-473C-B39E-4BC9B8FEF707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6F939D-F087-473C-B39E-4BC9B8FEF707}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61DD1B3F-1998-4BF6-B33F-4A8F69B5844B} = {79DBE5F4-4F51-46C4-9DD1-B5C4C435CE5F}
+		{6031A04D-330F-4161-BCA8-38B0DA64EB74} = {79DBE5F4-4F51-46C4-9DD1-B5C4C435CE5F}
+		{89862567-F49C-41F8-AE51-E7AEE041740D} = {79DBE5F4-4F51-46C4-9DD1-B5C4C435CE5F}
+		{D550FEB1-9DAD-4C30-98F4-0C251F195A52} = {79DBE5F4-4F51-46C4-9DD1-B5C4C435CE5F}
+		{9D7CA96C-30A4-4E3C-89E0-4AB61CBFB360} = {79DBE5F4-4F51-46C4-9DD1-B5C4C435CE5F}
+		{8BB15248-23E5-4BD1-AC41-74A35DA731BA} = {79DBE5F4-4F51-46C4-9DD1-B5C4C435CE5F}
+	EndGlobalSection
+EndGlobal

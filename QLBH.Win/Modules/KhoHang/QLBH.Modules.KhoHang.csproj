@@ -1,0 +1,2869 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FE0E7E9-5724-477E-8CE2-25587E91C29A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBanHang</RootNamespace>
+    <AssemblyName>QLBanHang.Modules.KhoHang</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
+    <ManifestCertificateThumbprint>7594B1A05527A26AEDD64E6C5781ADB2C2DC26F0</ManifestCertificateThumbprint>
+    <ManifestKeyFile>QLBanHang_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>D:\Projects\QLBanHang\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\TranAnh\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\TranAnh\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a" />
+    <Reference Include="DevExpress.Charts.v9.2.Core, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.OfficeSkins.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a" />
+    <Reference Include="DevExpress.Utils.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v9.2.Core, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="QLBanHang.Modules.BanHang, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.DanhMuc, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.DongBoERP, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\TranAnh\DongBoERP\QLBanHang.Modules.DongBoERP.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBanHang.Modules.HeThong, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\TranAnh\HeThong\QLBanHang.Modules.HeThong.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBH.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\QLBH.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QLBH.Core, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QLBH.Documents\References\QLBH.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Properties\Resources.Designer.cs">
+      <Link>Properties\Resources.Designer.cs</Link>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Base\frmLookUp_TransTypeBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Base\frm_LookUpXuatDieuChuyenBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Base\frm_LookUpXuatDieuChuyenBase.Designer.cs">
+      <DependentUpon>frm_LookUpXuatDieuChuyenBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Base\frm_LookUpDotKiemKeBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Base\frm_LookUpDotKiemKeBase.Designer.cs">
+      <DependentUpon>frm_LookUpDotKiemKeBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Base\frm_LookUpDotKiemKeEndBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Base\frm_LookUpDotKiemKeEndBase.Designer.cs">
+      <DependentUpon>frm_LookUpDotKiemKeEndBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Bussiness\NhapDoiLinhKienLoiBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\NhapKhoTieuHaoBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\DeNghiNhapTieuHaoNewBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XuatDoiLinhKienLoiBusiness.cs" />
+    <Compile Include="Modules\KhoHang\frmChiTietChungTuNhapNcc2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\BaoCaoDieuChuyenKhoTongGiaoDao.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\BaoCaoDieuChuyenKhoTongGiaoDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenInfor\DieuChuyenKhoTongGiaoInfo.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_BaoCaoDieuChuyenKhoTongGiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_BaoCaoDieuChuyenKhoTongGiao.Designer.cs">
+      <DependentUpon>frm_BaoCaoDieuChuyenKhoTongGiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuXuatTraNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuXuatTraNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuXuatTraNCC.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuXuatTraNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\BaoCaoGiaoDichKhongDongBoDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\PurchaseOrderDao.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_BaoCaoDieuChuyenHangDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_BaoCaoDieuChuyenHangDemo.Designer.cs">
+      <DependentUpon>frm_BaoCaoDieuChuyenHangDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoGiaoDichKhongDongBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoGiaoDichKhongDongBo.Designer.cs">
+      <DependentUpon>frm_BaoCaoGiaoDichKhongDongBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoXuatDoiLinhKienLoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoXuatDoiLinhKienLoi.Designer.cs">
+      <DependentUpon>frm_BaoCaoXuatDoiLinhKienLoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\BaoCaoTonTrungChuyenDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmThongKe_ChiTietHangTrungChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_ChiTietHangTrungChuyen.Designer.cs">
+      <DependentUpon>frmThongKe_ChiTietHangTrungChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\DoiLinhKienLoiDAO.cs" />
+    <Compile Include="Modules\KhoHang\frm_BaoCaoDanhSachPhieuKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoDanhSachPhieuKiemKe.Designer.cs">
+      <DependentUpon>frm_BaoCaoDanhSachPhieuKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\TransTypeDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmDoiMaLinhKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDoiMaLinhKien.Designer.cs">
+      <DependentUpon>frmDoiMaLinhKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookUp_TransType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoKiemKeMaVachBanNhieuLan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoKiemKeMaVachBanNhieuLan.Designer.cs">
+      <DependentUpon>frm_BaoCaoKiemKeMaVachBanNhieuLan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_ChungTuKiemKeLienQuanMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_ChungTuKiemKeLienQuanMaVach.Designer.cs">
+      <DependentUpon>frmThongKe_ChungTuKiemKeLienQuanMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_ChungTuKiemKeLienQuanTon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_ChungTuKiemKeLienQuanTon.Designer.cs">
+      <DependentUpon>frmThongKe_ChungTuKiemKeLienQuanTon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookup_SanPhamTrungMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookup_SanPhamTrungMaVach.Designer.cs">
+      <DependentUpon>frmLookup_SanPhamTrungMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookup_DotKiemKeKetThuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookup_DotKiemKeKetThuc.Designer.cs">
+      <DependentUpon>frmLookup_DotKiemKeKetThuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoKiemKeTonMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoKiemKeTonMaVach.Designer.cs">
+      <DependentUpon>frm_BaoCaoKiemKeTonMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoKiemKeTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoKiemKeTonKho.Designer.cs">
+      <DependentUpon>frm_BaoCaoKiemKeTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\DotKiemKeDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmBaoCaoThanhPhamSanXuatChuaXacNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoThanhPhamSanXuatChuaXacNhan.Designer.cs">
+      <DependentUpon>frmBaoCaoThanhPhamSanXuatChuaXacNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookup_DotKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookup_DotKiemKe.Designer.cs">
+      <DependentUpon>frmLookup_DotKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoPhieuDieuChuyenChoNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoPhieuDieuChuyenChoNhan.Designer.cs">
+      <DependentUpon>frm_BaoCaoPhieuDieuChuyenChoNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\DieuChuyenNotifyDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenBusiness\DeNghiXuatDieuChuyenTGBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenBusiness\XuatDieuChuyenTGBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\DeNghiXuatDieuChuyenTGDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\XuatDieuChuyenKhoTGDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\DeNghiXuatDieuChuyenTGDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\XuatDieuChuyenKhoTGDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frmLookup_XuatDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frmLookup_XuatDC.Designer.cs">
+      <DependentUpon>frmLookup_XuatDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenNotify.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenBusiness\NhapDieuChuyenTGBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenBusiness\DeNghiNhapDieuChuyenTGBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\NhapDieuChuyenKhoTGDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\DeNghiNhapDieuChuyenTGDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\NhapDieuChuyenKhoDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\DeNghiNhapDieuChuyenTGDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_ChiTietPhieuNhapDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_ChiTietPhieuXuatDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoCNhapXuatPOChuaXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoCNhapXuatPOChuaXuat.Designer.cs">
+      <DependentUpon>frmBaoCaoCNhapXuatPOChuaXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietNhapXuatThanhPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietNhapXuatThanhPham.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiTietNhapXuatThanhPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietGiaoDichNhapXuatLK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietGiaoDichNhapXuatLK.Designer.cs">
+      <DependentUpon>frmBaoCaoChiTietGiaoDichNhapXuatLK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoTongHopGiaoDichNhapXuatLK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoTongHopGiaoDichNhapXuatLK.Designer.cs">
+      <DependentUpon>frmBaoCaoTongHopGiaoDichNhapXuatLK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietNhapTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietNhapTieuHao.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiTietNhapTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopNhapXuatThanhPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopNhapXuatThanhPham.Designer.cs">
+      <DependentUpon>frm_BaoCaoTongHopNhapXuatThanhPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopNhapTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopNhapTieuHao.Designer.cs">
+      <DependentUpon>frm_BaoCaoTongHopNhapTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietXuatNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietXuatNoiBo.Designer.cs">
+      <DependentUpon>frmBaoCaoChiTietXuatNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoDanhSachXuatNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoDanhSachXuatNoiBo.Designer.cs">
+      <DependentUpon>frmBaoCaoDanhSachXuatNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTonTrungChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTonTrungChuyen.Designer.cs">
+      <DependentUpon>frm_BaoCaoTonTrungChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietMaVachNhapTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\NhapTieuHaoDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\DeNghiNhapTieuHaoDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietNhapNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietNhapNoiBo.Designer.cs">
+      <DependentUpon>frmBaoCaoChiTietNhapNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoDanhSachNhapNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoDanhSachNhapNoiBo.Designer.cs">
+      <DependentUpon>frmBaoCaoDanhSachNhapNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietNhapHangMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietNhapHangMua.Designer.cs">
+      <DependentUpon>frmBaoCaoChiTietNhapHangMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoDanhSachNhapHangMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoDanhSachNhapHangMua.Designer.cs">
+      <DependentUpon>frmBaoCaoDanhSachNhapHangMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookup_XuatTH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmLookup_XuatTH.Designer.cs">
+      <DependentUpon>frmLookup_XuatTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDotKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDotKiemKe.Designer.cs">
+      <DependentUpon>frm_DanhSachDotKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuNhapTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuNhapTieuHao.Designer.cs">
+      <DependentUpon>frm_PhieuNhapTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuNhapTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuNhapTieuHao.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuNhapTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiNhapTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiNhapTieuHao.Designer.cs">
+      <DependentUpon>frm_PhieuDeNghiNhapTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiNhapTH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiNhapTH.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuDeNghiNhapTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopXuatTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopXuatTieuHao.Designer.cs">
+      <DependentUpon>frm_BaoCaoTongHopXuatTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\BaoCaoKiemKeDAO.cs" />
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopKiemKe.Designer.cs">
+      <DependentUpon>frm_BaoCaoTongHopKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\BaoCaoXuatNhapTonLichSuDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoChiTietSanXuat.Designer.cs">
+      <DependentUpon>frmBaoCaoChiTietSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Bussiness\NhapDoiMaBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XuatDoiMaBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XuatKhoTieuHaoBusinessnew.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\DeNghiNhanDieuChuyenBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\DeNghiXuatTieuHaoNewBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\NhapLinhKienSXBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XacNhanNhapThanhPhanSanXuatBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XuatDieuChuyenBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\NhapThanhPhamSanXuatBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XuatLinhKienSanXuatBussiness.cs" />
+    <Compile Include="Modules\KhoHang\frmThongKe_XuatNhapTonLichSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_XuatNhapTonLichSu.Designer.cs">
+      <DependentUpon>frmThongKe_XuatNhapTonLichSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\NoteReportDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmBaoCaoTongHopSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBaoCaoTongHopSanXuat.Designer.cs">
+      <DependentUpon>frmBaoCaoTongHopSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoDanhMuc.Designer.cs">
+      <DependentUpon>frm_BaoCaoDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietNhanChuyenKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietNhanChuyenKho.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiTietNhanChuyenKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopNhanChuyenKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopNhanChuyenKho.Designer.cs">
+      <DependentUpon>frm_BaoCaoTongHopNhanChuyenKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\BCDongBoPODAO.cs" />
+    <Compile Include="Modules\KhoHang\frmChiTietNhapDoiMa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTietNhapDoiMa.Designer.cs">
+      <DependentUpon>frmChiTietNhapDoiMa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachNhapComBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachNhapComBo.Designer.cs">
+      <DependentUpon>frmDanhSachNhapComBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachNhapDoiMa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachNhapDoiMa.Designer.cs">
+      <DependentUpon>frmDanhSachNhapDoiMa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_TonSanPham_v0.1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_TonSanPham_v0.1.Designer.cs">
+      <DependentUpon>frmThongKe_TonSanPham_v0.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoDongBoPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoDongBoPO.Designer.cs">
+      <DependentUpon>frm_BaoCaoDongBoPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\DeNghiXuatTieuHaoDAOnew.cs" />
+    <Compile Include="Modules\KhoHang\DAO\XuatTieuHaoDAOnew.cs" />
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopGiaoDichNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopGiaoDichNhapHang.Designer.cs">
+      <DependentUpon>frm_BaoCaoTongHopGiaoDichNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopHangChuyenKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTongHopHangChuyenKho.Designer.cs">
+      <DependentUpon>frm_BaoCaoTongHopHangChuyenKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoXuatNhapTonLichSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoXuatNhapTonLichSu.Designer.cs">
+      <DependentUpon>frm_BaoCaoXuatNhapTonLichSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_CauHinhSanPhamImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_CauHinhSanPhamImport.Designer.cs">
+      <DependentUpon>frm_CauHinhSanPhamImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuXuatTieuHaonew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuXuatTieuHaonew.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuXuatTieuHaonew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietMaVachnew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietXuatTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietXuatTieuHao.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiTietXuatTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoLenhSXChuaXuatLK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoLenhSXChuaXuatLK.Designer.cs">
+      <DependentUpon>frm_BaoCaoLenhSXChuaXuatLK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiXuatTHnew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiXuatTHnew.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuDeNghiXuatTHnew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_TonChiTietMaVachBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_TonChiTietMaVachBy.Designer.cs">
+      <DependentUpon>frmThongKe_TonChiTietMaVachBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\NhapReportDAO.cs" />
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietGiaoDichNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietGiaoDichNhapHang.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiTietGiaoDichNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietHangChuyenKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietHangChuyenKho.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiTietHangChuyenKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietMaVachSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoChiTietMaVachSanXuat.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiTietMaVachSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuNhapNoiBotest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuNhapNoiBotest.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuNhapNoiBotest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DieuChuyenBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DieuChuyenBase.Designer.cs">
+      <DependentUpon>frm_DieuChuyenBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_InNoteSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_InNoteSanPham.Designer.cs">
+      <DependentUpon>frm_InNoteSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListChungTuNhapHangMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListChungTuNhapHangMua.Designer.cs">
+      <DependentUpon>frm_ListChungTuNhapHangMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDeNghiNhanDieuChuyenNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDeNghiNhanDieuChuyenNew.Designer.cs">
+      <DependentUpon>frm_DanhSachDeNghiNhanDieuChuyenNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListPhieuBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListPhieuBase.Designer.cs">
+      <DependentUpon>frm_ListPhieuBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListThongKeMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListThongKeMaVach.Designer.cs">
+      <DependentUpon>frm_ListThongKeMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiNhanDieuChuyenNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietPhieuDieuChuyenCoDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietPhieuDieuChuyenCungTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiXuatTieuHaoNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiXuatTieuHaoNew.Designer.cs">
+      <DependentUpon>frm_PhieuDeNghiXuatTieuHaoNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDieuChuyenCungTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiDieuChuyenCungTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_LichSuThayDoiGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_LichSuThayDoiGia.Designer.cs">
+      <DependentUpon>frmBC_LichSuThayDoiGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\BangGiaReportDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\HoaDonGTGTDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmBC_BangGiaChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_BangGiaChiTiet.Designer.cs">
+      <DependentUpon>frmBC_BangGiaChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_TinhTrangBangGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_TinhTrangBangGia.Designer.cs">
+      <DependentUpon>frmBC_TinhTrangBangGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\BCBanHangDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmBC_TinhTrangDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_TinhTrangDonHang.Designer.cs">
+      <DependentUpon>frmBC_TinhTrangDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\KiemKeDAO.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XuatThanhPhamSXBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DAO\NhapThanhPhamSanXuatDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\PhieuThuDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\PhieuXuatKhoDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\TonDauKyDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmChiTietTachThanhPhamSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTietTachThanhPhamSX.Designer.cs">
+      <DependentUpon>frmChiTietTachThanhPhamSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTietXacNhanNhapThanhPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTietXacNhanNhapThanhPham.Designer.cs">
+      <DependentUpon>frmChiTietXacNhanNhapThanhPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\XacNhanNhapThanhPhanDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmDanhSachNhapThanhPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachNhapThanhPham.Designer.cs">
+      <DependentUpon>frmDanhSachNhapThanhPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachTachThanhPhamSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachTachThanhPhamSX.Designer.cs">
+      <DependentUpon>frmDanhSachTachThanhPhamSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachXuatLinhKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachXuatLinhKien.Designer.cs">
+      <DependentUpon>frmDanhSachXuatLinhKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_ChungTuLienQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_ChungTuLienQuan.Designer.cs">
+      <DependentUpon>frmThongKe_ChungTuLienQuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachXacNhanNhapThanhPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachXacNhanNhapThanhPham.Designer.cs">
+      <DependentUpon>frmDanhSachXacNhanNhapThanhPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_TonChiTietMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_TonChiTietMaVach.Designer.cs">
+      <DependentUpon>frmThongKe_TonChiTietMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\KhoThongKeHangTonDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\NhanDieuChuyenDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\SanXuatCTietLenhDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\SanXuatLenhDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmChiTietNhapThanhPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTietNhapThanhPham.Designer.cs">
+      <DependentUpon>frmChiTietNhapThanhPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachXuatLKSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmDanhSachXuatLKSX.Designer.cs">
+      <DependentUpon>frmDanhSachXuatLKSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmMaVachNhapThanhPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_TonSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmThongKe_TonSanPham.Designer.cs">
+      <DependentUpon>frmThongKe_TonSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmTimKiemMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmTimKiemMaVach.Designer.cs">
+      <DependentUpon>frmTimKiemMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietNhapNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietPhieuKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietPhieuKiemKe.Designer.cs">
+      <DependentUpon>frm_ChiTietPhieuKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietPhieuNhanDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuKiemKe.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuNhanDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuNhanDieuChuyen.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuNhanDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiNhanDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Bussiness\DeNghiDieuChuyenBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\KeToanNhapNccBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\KeToanXuatNoiBoBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\NhanDieuChuyenBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\NhapNccBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\DeNghiXuatTieuHaoBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\KhoXuatNccBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\KhoXuatNoiBoBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\NhapNoiBoBussiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XuatKhoTieuHaoBusiness.cs" />
+    <Compile Include="Modules\KhoHang\Bussiness\XuatNoiBoBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DAO\DeNghiDieuChuyenDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\DeNghiNhanDieuChuyenDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\NhapNoiBoDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\XuatDieuChuyenDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\XuatNhapNccDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\DeNghiXuatTieuHaoDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\XuatNoiBoDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\XuatTieuHaoDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmChiTietChungTuBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTietChungTuBase.Designer.cs">
+      <DependentUpon>frmChiTietChungTuBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChungTuChiTietHanghoaNhapNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChungTuXuat_ChiTietHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\tmp_XuatHang_LogDAO.cs" />
+    <Compile Include="Modules\KhoHang\frm_ChiTietMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietPhieuDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietXuatNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDeNghiDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDeNghiDieuChuyen.Designer.cs">
+      <DependentUpon>frm_DanhSachDeNghiDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDeNghiNhanDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDeNghiNhanDieuChuyen.Designer.cs">
+      <DependentUpon>frm_DanhSachDeNghiNhanDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiXuatTH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiXuatTH.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuDeNghiXuatTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\tmp_XuatHang_DAO.cs" />
+    <Compile Include="Modules\KhoHang\frmChiTietChungTuNhapNcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachDieuChuyen.Designer.cs">
+      <DependentUpon>frm_DanhSachDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuNhapNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuNhapNoiBo.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuNhapNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuXuatNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuXuatNoiBo.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuXuatNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuXuatTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_DanhSachPhieuXuatTieuHao.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuXuatTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTiet_ChungTuTraNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListChungTuTraNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListChungTuTraNCC.Designer.cs">
+      <DependentUpon>frm_ListChungTuTraNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DAO\tbl_ChungTuDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\tbl_ChungTu_ChiTietDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\tbl_ChungTu_ChiTiet_HanghoaDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\tmp_NhapHang_LogDAO.cs" />
+    <Compile Include="Modules\KhoHang\DAO\tmp_NhapHang_UserDAO.cs" />
+    <Compile Include="Modules\KhoHang\frmBC_HangNhapChuaCoTrongOracle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_HangNhapChuaCoTrongOracle.Designer.cs">
+      <DependentUpon>frmBC_HangNhapChuaCoTrongOracle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_InHDPhieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_InHDPhieu.designer.cs">
+      <DependentUpon>frmBC_InHDPhieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_KiemKeKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_KiemKeKho.Designer.cs">
+      <DependentUpon>frmBC_KiemKeKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_LietKeChiTietGiaoDichNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_LietKeChiTietGiaoDichNhap.Designer.cs">
+      <DependentUpon>frmBC_LietKeChiTietGiaoDichNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_PhieuNhapChuaDuChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_PhieuNhapChuaDuChiTiet.designer.cs">
+      <DependentUpon>frmBC_PhieuNhapChuaDuChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_TonDauKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmBC_TonDauKy.Designer.cs">
+      <DependentUpon>frmBC_TonDauKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmCapNhatTonDauKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmCapNhatTonDauKy.Designer.cs">
+      <DependentUpon>frmCapNhatTonDauKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmCapNhatTonDauKy_ChiTietHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmCapNhatTonDauKy_ChiTietHangHoa.Designer.cs">
+      <DependentUpon>frmCapNhatTonDauKy_ChiTietHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmCapNhatTonDauKy_SanPhamChuaMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmCapNhatTonDauKy_SanPhamChuaMaVach.Designer.cs">
+      <DependentUpon>frmCapNhatTonDauKy_SanPhamChuaMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTiet_ChungTuNhapBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChiTiet_ChungTuNhapBase.Designer.cs">
+      <DependentUpon>frmChiTiet_ChungTuNhapBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChungTuNhap_ChiTietHangHoaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmChungTuNhap_ChiTietHangHoaBase.Designer.cs">
+      <DependentUpon>frmChungTuNhap_ChiTietHangHoaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuKiemKeKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuKiemKeKho.Designer.cs">
+      <DependentUpon>frmPhieuKiemKeKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapLai_LuaChonIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapLai_LuaChonIn.Designer.cs">
+      <DependentUpon>frmPhieuNhapLai_LuaChonIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLai.Designer.cs">
+      <DependentUpon>frmPhieuNhapTraLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop.Designer.cs">
+      <DependentUpon>frmPhieuNhapTraLaiXuatGop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop_ChonChungTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop_ChonChungTu.Designer.cs">
+      <DependentUpon>frmPhieuNhapTraLaiXuatGop_ChonChungTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop_LuaChonIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop_LuaChonIn.Designer.cs">
+      <DependentUpon>frmPhieuNhapTraLaiXuatGop_LuaChonIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLai_ChonPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuNhapTraLai_ChonPhieuXuat.Designer.cs">
+      <DependentUpon>frmPhieuNhapTraLai_ChonPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat.Designer.cs">
+      <DependentUpon>frmPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHang.Designer.cs">
+      <DependentUpon>frmPhieuXuatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHangEmei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHangEmei.Designer.cs">
+      <DependentUpon>frmPhieuXuatHangEmei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHangEmei_ChonMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHangEmei_ChonMaVach.Designer.cs">
+      <DependentUpon>frmPhieuXuatHangEmei_ChonMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHoaDon.Designer.cs">
+      <DependentUpon>frmPhieuXuatHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHoaDon_ChonChietKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHoaDon_ChonChietKhau.Designer.cs">
+      <DependentUpon>frmPhieuXuatHoaDon_ChonChietKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHoaDon_ChonKyHieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatHoaDon_ChonKyHieu.Designer.cs">
+      <DependentUpon>frmPhieuXuatHoaDon_ChonKyHieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatKhac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuatKhac.Designer.cs">
+      <DependentUpon>frmPhieuXuatKhac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat_ChonKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat_ChonKhuyenMai.Designer.cs">
+      <DependentUpon>frmPhieuXuat_ChonKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat_ChuyenKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat_ChuyenKhoan.Designer.cs">
+      <DependentUpon>frmPhieuXuat_ChuyenKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat_LuaChonIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat_LuaChonIn.Designer.cs">
+      <DependentUpon>frmPhieuXuat_LuaChonIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat_TraTienThua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmPhieuXuat_TraTienThua.Designer.cs">
+      <DependentUpon>frmPhieuXuat_TraTienThua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmTimPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmTimPhieuXuat.Designer.cs">
+      <DependentUpon>frmTimPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmXuatGopHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmXuatGopHoaDon.Designer.cs">
+      <DependentUpon>frmXuatGopHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmXuatGopHoaDon_ChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmXuatGopHoaDon_ChiTiet.Designer.cs">
+      <DependentUpon>frmXuatGopHoaDon_ChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmXuatGopHoaDon_XemChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frmXuatGopHoaDon_XemChiTiet.Designer.cs">
+      <DependentUpon>frmXuatGopHoaDon_XemChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoNhapHang.Designer.cs">
+      <DependentUpon>frm_BaoCaoNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_BaoCaoTonKho.Designer.cs">
+      <DependentUpon>frm_BaoCaoTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChungTuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChungTuNhap.Designer.cs">
+      <DependentUpon>frm_ChungTuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_InMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_InMaVach.Designer.cs">
+      <DependentUpon>frm_InMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_KiemKeKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_KiemKeKho.Designer.cs">
+      <DependentUpon>frm_KiemKeKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListChungTuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ListChungTuNhap.Designer.cs">
+      <DependentUpon>frm_ListChungTuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDeNghiXuatTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuNhanDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuNhapNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuXuatNoiBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuXuatTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuXuatTieuHaoNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_PhieuXuatTieuHaoNew.Designer.cs">
+      <DependentUpon>frm_PhieuXuatTieuHaoNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietTongHopKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_ChiTietTongHopKiemKe.Designer.cs">
+      <DependentUpon>frm_ChiTietTongHopKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_XuatHuyTieuHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\frm_XuatHuyTieuHao.Designer.cs">
+      <DependentUpon>frm_XuatHuyTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Infors\BangGiaReportInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BaoCaoNhapXuatPOChuaXuatInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BaoCaoXuatNhapTonLichSuInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BaoCao_ChiTietInfor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Infors\BCChinhSachInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCChiTietHangChuyenKhoInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCChiTietKiemKeInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCChiTietXuatTieuHaoInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCTinhTrangDonHangInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChiTietDieuChuyenDonHangInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChiTietKiemKeInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuChiTietHangHoaKiemKePairInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuChiTietMaVachInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuCTHanghoaBasePairInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuDeNghiNhanDieuChuyenInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuDeNghiXuatDieuChuyenInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuDeNghiXuatTieuHaoInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuDoiLinhKienLoiInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuNhanDieuChuyenInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuNhapNoiBoInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuXuatDieuChuyenInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuXuatNoiBoInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTu_ChiTietHangHoaKiemKeInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTu_HangHoa_ChiTietInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuXuatNhapNccInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuXuatNhapNccChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuNhapNccChiTietHangHoaInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTu_ChiTietHangHoaBaseInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTu_ChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTu_ChiTiet_HangHoaInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuXuatTieuHaoInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCTinhTrangBangGiaInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCBangGiaChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCSanPhamKemInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCSieuThiApDungInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCLichSuThayDoiGiaInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BCLichSuThayDoiGiaDetailInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTu_ChiTietHangHoaDCInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuDeNghiXuatTieuHaoInfornew.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuXuatTieuHaoInfornew.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTu_ChiTietHangHoaBaseInfonew.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTu_ChiTietInfonew.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BaoCao_ChiTietXTHInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\BaoCao_ChiTietDCInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\DotKiemKeInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\GiaoDichNhapXuatKhongDongBoInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\LookUpDotKiemKeInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\TestHoaDonGTGTInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\NhapHangMuaReportInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\DeNghiXuatTieuHaoChiTietInfonew.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChiTietGiaoDichNhapHangReportInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\HangHoaChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\HoaDonGTGTInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\HoaDonGTGT_ChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\KhoThongKeTonMaVachInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\DeNghiDieuChuyenInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\DeNghiNhanDieuChuyenInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\DeNghiXuatTieuHaoChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\DMChungTuNhapInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\DMChungTuPhieuNhapKhoInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\DMChungTuXuatInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\KhoThongKeHangTonInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\KiemKeInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\LenhSXChuaNhapLKReportInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\LichSuNhapHangInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\MaVachSXReportInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\NhapNoiBoChiTietInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChiTietHangHoaGridInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\NoteSanPhamReportInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\PhieuThu_ChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\PhieuXuatKhoInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\PhieuXuatKho_ChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\SanXuatCTietLenhInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\SanXuatLenhInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\SanXuatNhapTachInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\tmp_NhapHang_LogInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\tmp_NhapHang_UserChiTietInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\tmp_NhapHang_UserInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\tmp_XuatHang_Log_Info.cs" />
+    <Compile Include="Modules\KhoHang\Infors\tmp_XuatKhoNoiBoInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\tmp_XuatKho_UserInfor.cs" />
+    <Compile Include="Modules\KhoHang\Infors\ChungTuXuatNccChiTietHangHoaInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\TonDauKyInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\TongHopNhapXuatLKInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\TransTypeInfo.cs" />
+    <Compile Include="Modules\KhoHang\Infors\XuatKhoListInfo.cs" />
+    <Compile Include="Modules\KhoHang\Providers\BangGiaReportDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\BaoCaoGiaoDichKhongDongBoDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\BaoCaoTonTrungChuyenDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\BaoCaoXuatNhapTonLichSuDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\BCBanHangDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\BCDongBoPODataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\BaoCaoKiemKeDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DieuChuyenNotifyProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DoiLinhKienLoiDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DotKiemKeDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\NhapTieuHaoProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DeNghiNhapTieuHaoProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\NoteReportDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\NhanDieuChuyenCungTTDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\PurchaseOrderProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\TransTypeDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\XuatTieuHaoProvidernew.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DeNghiXuatTieuHaoProvidernew.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DeNghiDieuChuyenDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DeNghiNhanDieuChuyenDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DieuChuyenDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\HoaDonGTGTDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\KeToanXuatNoiBoDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\KhoNhapNCCDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\KhoThongKeHangTonDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\KhoXuatNccDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\KhoXuatNoiBoDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\KiemKeDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\NhanDieuChuyenDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\NhapNoiBoDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\NhapReportDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\NhapThanhPhamSanXuatDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\PhieuThuDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\PhieuXuatKhoDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\SanXuatCTietLenhProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\SanXuatLenhProvier.cs" />
+    <Compile Include="Modules\KhoHang\Providers\SanXuatNhapTachDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\tblChungTuDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\tblChungTu_ChiTietDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\tblChungTu_ChiTiet_HangHoaDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\tmp_NhapHang_LogDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\tmp_NhapHang_UserProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\tmp_XuatHang_LogDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\DeNghiXuatTieuHaoProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\TonDauKyDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\XuatDieuChuyenDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\XuatNoiBoDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\Providers\XuatTieuHaoProvider.cs" />
+    <Compile Include="Modules\KhoHang\Reports\rpt_HoaDonGiaTriGiaTangNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_HoaDonGiaTriGiaTangNew.Designer.cs">
+      <DependentUpon>rpt_HoaDonGiaTriGiaTangNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraHangNCC_TH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraHangNCC_TH.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuTraHangNCC_TH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuKiemKe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuKiemKe.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA75.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA75.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA75.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA65.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA65.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA65.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Single.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Single.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA7Single.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Single.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Single.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA6Single.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5Single.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5Single.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA5Single.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Detailnew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Detailnew.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA6Detailnew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6new.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6new.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA6new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmChonBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmChonBaoCao.Designer.cs">
+      <DependentUpon>frmChonBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapHangMuaTongHop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapHangMuaTongHop.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuNhapHangMuaTongHop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiNhapTieuHao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiNhapTieuHao.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuDeNghiNhapTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptInPhieuBHSX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptInPhieuBHSX.Designer.cs">
+      <DependentUpon>rptInPhieuBHSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptInPhieuBH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptInPhieuBH.Designer.cs">
+      <DependentUpon>rptInPhieuBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuTachThanhPhamSX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuTachThanhPhamSX.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuTachThanhPhamSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5Detail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5Detail.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA5Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Detail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Detail.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA6Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraLaiHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraLaiHang.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuTraLaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Sub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Sub.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA7Sub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmBangGiaReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmBangGiaReport.Designer.cs">
+      <DependentUpon>frmBangGiaReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmHoaDonGTGTreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmHoaDonGTGTreport.Designer.cs">
+      <DependentUpon>frmHoaDonGTGTreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmPhieuThureport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmPhieuThureport.Designer.cs">
+      <DependentUpon>frmPhieuThureport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmPhieuXuatKhoReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\frmPhieuXuatKhoReport.Designer.cs">
+      <DependentUpon>frmPhieuXuatKhoReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptBCKiemKeKho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBCKiemKeKho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptBC_HangNhapChuaCoTrongOracle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBC_HangNhapChuaCoTrongOracle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptBC_LietKeChiTietNhapHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBC_LietKeChiTietNhapHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptBC_TonDauKy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBC_TonDauKy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptHoaDonBan_1011.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptHoaDonBan_1011.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuNhapKho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuNhapKho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuNhapLai.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuNhapLai.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuNhapLai_IEMI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuNhapLai_IEMI.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuThu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuThu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuXuat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuXuat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuXuatKho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuXuatKho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuXuat_IEMI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuXuat_IEMI.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuXuat_IEMI_TKho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuXuat_IEMI_TKho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rptPhieuXuat_TKho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuXuat_TKho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BangGia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BangGia.Designer.cs">
+      <DependentUpon>rpt_BangGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NhapHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_BC_NhapHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Detail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Detail.Designer.cs">
+      <DependentUpon>rpt_BC_NoteSanPhamA7Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiNhanDieuChuyen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiNhanDieuChuyen.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuDeNghiNhanDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiXuatDieuChuyen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiXuatDieuChuyen.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuDeNghiXuatDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiXuatTieuHao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiXuatTieuHao.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuDeNghiXuatTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuDieuChuyen.cs">
+      <DependentUpon>rpt_BC_PhieuDieuChuyen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhanDieuChuyen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhanDieuChuyen.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuNhanDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapChuaDuChiTiet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_BC_PhieuNhapChuaDuChiTiet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapHangMuaNCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapHangMuaNCC.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuNhapHangMuaNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapNoiBo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapNoiBo.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuNhapNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapThanhPham.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapThanhPham.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuNhapThanhPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuPhanCongGiaoNhan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuPhanCongGiaoNhan.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuPhanCongGiaoNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuThu.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraHangNCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraHangNCC.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuTraHangNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatDieuChuyen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatDieuChuyen.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuXuatDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatKho.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatKho.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuXuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatLK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatLK.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuXuatLK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatNoiBo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatNoiBo.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuXuatNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatTieuHao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatTieuHao.Designer.cs">
+      <DependentUpon>rpt_BC_PhieuXuatTieuHao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_TongHopTonKho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_BC_TongHopTonKho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BC_XuatHuyTieuHao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_BC_XuatHuyTieuHao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_HoaDonDieuChuyenGTGT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_HoaDonDieuChuyenGTGT.Designer.cs">
+      <DependentUpon>rpt_HoaDonDieuChuyenGTGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_HoaDonGiaTriGiaTang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_HoaDonGiaTriGiaTang.Designer.cs">
+      <DependentUpon>rpt_HoaDonGiaTriGiaTang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_HoaDonGTGT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_HoaDonGTGT.Designer.cs">
+      <DependentUpon>rpt_HoaDonGTGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BangKeHoaDonGTGT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_BangKeHoaDonGTGT.Designer.cs">
+      <DependentUpon>rpt_BangKeHoaDonGTGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\Reports\rpt_InMaVachSP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_InMaVachSP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\TestPhieuBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\TestPhieuBH.Designer.cs">
+      <DependentUpon>TestPhieuBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\TestUnits\frmChiTiet_ChungTuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\TestUnits\frmChungTuNhap_ChiTietHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\DeNghiNhapDieuChuyenDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\DeNghiXuatDieuChuyenDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\DeNghiNhapDieuChuyenDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\DeNghiXuatDieuChuyenDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenBusiness\DeNghiNhapDieuChuyenBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenBusiness\DeNghiXuatDieuChuyenBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenInfor\ChungTuDeNghiNhapDieuChuyenInfo.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenInfor\ChungTuDeNghiXuatDieuChuyenInfo.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenInfor\DeNghiNhapDieuChuyenChiTietInfor.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenInfor\DeNghiXuatDieuChuyenInfor.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuDeNghiXuatDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuDeNghiXuatDieuChuyen.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuDeNghiXuatDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuDeNghiNhapDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuDeNghiNhapDieuChuyen.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuDeNghiNhapDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuXuatDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuXuatDieuChuyen.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuXuatDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuNhapDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuNhapDieuChuyen.Designer.cs">
+      <DependentUpon>frm_DanhSachPhieuNhapDieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DieuChuyenKhoBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_DieuChuyenKhoBase.Designer.cs">
+      <DependentUpon>frm_DieuChuyenKhoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_PhieuDeNghiNhapDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_PhieuDeNghiXuatDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_PhieuNhapDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\frm_PhieuXuatDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\NhapDieuChuyenKhoDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenBusiness\NhapDieuChuyenBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenBusiness\XuatDieuChuyenBussiness.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDAO\XuatDieuChuyenKhoDAO.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\NhapDieuChuyenKhoTGDataProvider.cs" />
+    <Compile Include="Modules\KhoHang\DieuChuyenKho\DieuChuyenDataProvider\XuatDieuChuyenKhoDataProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="..\..\Properties\Resources.resx">
+      <Link>Properties\Resources.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTietChungTuNhapNcc2.resx">
+      <DependentUpon>frmChiTietChungTuNhapNcc2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_BaoCaoDieuChuyenKhoTongGiao.resx">
+      <DependentUpon>frm_BaoCaoDieuChuyenKhoTongGiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuXuatTraNCC.resx">
+      <DependentUpon>frm_PhieuXuatTraNCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuXuatTraNCC.resx">
+      <DependentUpon>frm_DanhSachPhieuXuatTraNCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_BaoCaoDieuChuyenHangDemo.resx">
+      <DependentUpon>frm_BaoCaoDieuChuyenHangDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoGiaoDichKhongDongBo.resx">
+      <DependentUpon>frm_BaoCaoGiaoDichKhongDongBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoXuatDoiLinhKienLoi.resx">
+      <DependentUpon>frm_BaoCaoXuatDoiLinhKienLoi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_ChiTietHangTrungChuyen.resx">
+      <DependentUpon>frmThongKe_ChiTietHangTrungChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoDanhSachPhieuKiemKe.resx">
+      <DependentUpon>frm_BaoCaoDanhSachPhieuKiemKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmDoiMaLinhKien.resx">
+      <DependentUpon>frmDoiMaLinhKien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoKiemKeMaVachBanNhieuLan.resx">
+      <DependentUpon>frm_BaoCaoKiemKeMaVachBanNhieuLan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_ChungTuKiemKeLienQuanMaVach.resx">
+      <DependentUpon>frmThongKe_ChungTuKiemKeLienQuanMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_ChungTuKiemKeLienQuanTon.resx">
+      <DependentUpon>frmThongKe_ChungTuKiemKeLienQuanTon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmLookup_SanPhamTrungMaVach.resx">
+      <DependentUpon>frmLookup_SanPhamTrungMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmLookup_DotKiemKeKetThuc.resx">
+      <DependentUpon>frmLookup_DotKiemKeKetThuc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoKiemKeTonMaVach.resx">
+      <DependentUpon>frm_BaoCaoKiemKeTonMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoKiemKeTonKho.resx">
+      <DependentUpon>frm_BaoCaoKiemKeTonKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoThanhPhamSanXuatChuaXacNhan.resx">
+      <DependentUpon>frmBaoCaoThanhPhamSanXuatChuaXacNhan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmLookup_DotKiemKe.resx">
+      <DependentUpon>frmLookup_DotKiemKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoPhieuDieuChuyenChoNhan.resx">
+      <DependentUpon>frm_BaoCaoPhieuDieuChuyenChoNhan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frmLookup_XuatDC.resx">
+      <DependentUpon>frmLookup_XuatDC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_ChiTietPhieuNhapDieuChuyen.resx">
+      <DependentUpon>frm_ChiTietPhieuNhapDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_ChiTietPhieuXuatDieuChuyen.resx">
+      <DependentUpon>frm_ChiTietPhieuXuatDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoCNhapXuatPOChuaXuat.resx">
+      <DependentUpon>frmBaoCaoCNhapXuatPOChuaXuat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoChiTietNhapXuatThanhPham.resx">
+      <DependentUpon>frm_BaoCaoChiTietNhapXuatThanhPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoChiTietGiaoDichNhapXuatLK.resx">
+      <DependentUpon>frmBaoCaoChiTietGiaoDichNhapXuatLK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoTongHopGiaoDichNhapXuatLK.resx">
+      <DependentUpon>frmBaoCaoTongHopGiaoDichNhapXuatLK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoChiTietNhapTieuHao.resx">
+      <DependentUpon>frm_BaoCaoChiTietNhapTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTongHopNhapXuatThanhPham.resx">
+      <DependentUpon>frm_BaoCaoTongHopNhapXuatThanhPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTongHopNhapTieuHao.resx">
+      <DependentUpon>frm_BaoCaoTongHopNhapTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoChiTietXuatNoiBo.resx">
+      <DependentUpon>frmBaoCaoChiTietXuatNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoDanhSachXuatNoiBo.resx">
+      <DependentUpon>frmBaoCaoDanhSachXuatNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTonTrungChuyen.resx">
+      <DependentUpon>frm_BaoCaoTonTrungChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietMaVachNhapTieuHao.resx">
+      <DependentUpon>frm_ChiTietMaVachNhapTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoChiTietNhapNoiBo.resx">
+      <DependentUpon>frmBaoCaoChiTietNhapNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoDanhSachNhapNoiBo.resx">
+      <DependentUpon>frmBaoCaoDanhSachNhapNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoChiTietNhapHangMua.resx">
+      <DependentUpon>frmBaoCaoChiTietNhapHangMua.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoDanhSachNhapHangMua.resx">
+      <DependentUpon>frmBaoCaoDanhSachNhapHangMua.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmLookup_XuatTH.resx">
+      <DependentUpon>frmLookup_XuatTH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachDotKiemKe.resx">
+      <DependentUpon>frm_DanhSachDotKiemKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuNhapTieuHao.resx">
+      <DependentUpon>frm_PhieuNhapTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuNhapTieuHao.resx">
+      <DependentUpon>frm_DanhSachPhieuNhapTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDeNghiNhapTieuHao.resx">
+      <DependentUpon>frm_PhieuDeNghiNhapTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiNhapTH.resx">
+      <DependentUpon>frm_DanhSachPhieuDeNghiNhapTH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTongHopXuatTieuHao.resx">
+      <DependentUpon>frm_BaoCaoTongHopXuatTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTongHopKiemKe.resx">
+      <DependentUpon>frm_BaoCaoTongHopKiemKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoChiTietSanXuat.resx">
+      <DependentUpon>frmBaoCaoChiTietSanXuat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBaoCaoTongHopSanXuat.resx">
+      <DependentUpon>frmBaoCaoTongHopSanXuat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_XuatNhapTonLichSu.resx">
+      <DependentUpon>frmThongKe_XuatNhapTonLichSu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoDanhMuc.resx">
+      <DependentUpon>frm_BaoCaoDanhMuc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoChiTietNhanChuyenKho.resx">
+      <DependentUpon>frm_BaoCaoChiTietNhanChuyenKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTongHopNhanChuyenKho.resx">
+      <DependentUpon>frm_BaoCaoTongHopNhanChuyenKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTietNhapDoiMa.resx">
+      <DependentUpon>frmChiTietNhapDoiMa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmDanhSachNhapComBo.resx">
+      <DependentUpon>frmDanhSachNhapComBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmDanhSachNhapDoiMa.resx">
+      <DependentUpon>frmDanhSachNhapDoiMa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_TonSanPham_v0.1.resx">
+      <DependentUpon>frmThongKe_TonSanPham_v0.1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoDongBoPO.resx">
+      <DependentUpon>frm_BaoCaoDongBoPO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTongHopGiaoDichNhapHang.resx">
+      <DependentUpon>frm_BaoCaoTongHopGiaoDichNhapHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTongHopHangChuyenKho.resx">
+      <DependentUpon>frm_BaoCaoTongHopHangChuyenKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoXuatNhapTonLichSu.resx">
+      <DependentUpon>frm_BaoCaoXuatNhapTonLichSu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_CauHinhSanPhamImport.resx">
+      <DependentUpon>frm_CauHinhSanPhamImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuXuatTieuHaonew.resx">
+      <DependentUpon>frm_DanhSachPhieuXuatTieuHaonew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietMaVachnew.resx">
+      <DependentUpon>frm_ChiTietMaVachnew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoChiTietXuatTieuHao.resx">
+      <DependentUpon>frm_BaoCaoChiTietXuatTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoLenhSXChuaXuatLK.resx">
+      <DependentUpon>frm_BaoCaoLenhSXChuaXuatLK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiXuatTHnew.resx">
+      <DependentUpon>frm_DanhSachPhieuDeNghiXuatTHnew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_TonChiTietMaVachBy.resx">
+      <DependentUpon>frmThongKe_TonChiTietMaVachBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoChiTietGiaoDichNhapHang.resx">
+      <DependentUpon>frm_BaoCaoChiTietGiaoDichNhapHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoChiTietHangChuyenKho.resx">
+      <DependentUpon>frm_BaoCaoChiTietHangChuyenKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoChiTietMaVachSanXuat.resx">
+      <DependentUpon>frm_BaoCaoChiTietMaVachSanXuat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietNhapNoiBo.resx">
+      <DependentUpon>frm_ChiTietNhapNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuNhapNoiBotest.resx">
+      <DependentUpon>frm_DanhSachPhieuNhapNoiBotest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DieuChuyenBase.resx">
+      <DependentUpon>frm_DieuChuyenBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_InNoteSanPham.resx">
+      <DependentUpon>frm_InNoteSanPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ListChungTuNhapHangMua.resx">
+      <DependentUpon>frm_ListChungTuNhapHangMua.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachDeNghiNhanDieuChuyenNew.resx">
+      <DependentUpon>frm_DanhSachDeNghiNhanDieuChuyenNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ListPhieuBase.resx">
+      <DependentUpon>frm_ListPhieuBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ListThongKeMaVach.resx">
+      <DependentUpon>frm_ListThongKeMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDeNghiNhanDieuChuyenNew.resx">
+      <DependentUpon>frm_PhieuDeNghiNhanDieuChuyenNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietPhieuDieuChuyenCoDH.resx">
+      <DependentUpon>frm_ChiTietPhieuDieuChuyenCoDH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietPhieuDieuChuyenCungTT.resx">
+      <DependentUpon>frm_ChiTietPhieuDieuChuyenCungTT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDeNghiXuatTieuHaoNew.resx">
+      <DependentUpon>frm_PhieuDeNghiXuatTieuHaoNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDieuChuyenCungTT.resx">
+      <DependentUpon>frm_PhieuDieuChuyenCungTT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDeNghiDieuChuyenCungTT.resx">
+      <DependentUpon>frm_PhieuDeNghiDieuChuyenCungTT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_LichSuThayDoiGia.resx">
+      <DependentUpon>frmBC_LichSuThayDoiGia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_BangGiaChiTiet.resx">
+      <DependentUpon>frmBC_BangGiaChiTiet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_TinhTrangBangGia.resx">
+      <DependentUpon>frmBC_TinhTrangBangGia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_TinhTrangDonHang.resx">
+      <DependentUpon>frmBC_TinhTrangDonHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTietTachThanhPhamSX.resx">
+      <DependentUpon>frmChiTietTachThanhPhamSX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTietXacNhanNhapThanhPham.resx">
+      <DependentUpon>frmChiTietXacNhanNhapThanhPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmDanhSachNhapThanhPham.resx">
+      <DependentUpon>frmDanhSachNhapThanhPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmDanhSachTachThanhPhamSX.resx">
+      <DependentUpon>frmDanhSachTachThanhPhamSX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmDanhSachXuatLinhKien.resx">
+      <DependentUpon>frmDanhSachXuatLinhKien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_ChungTuLienQuan.resx">
+      <DependentUpon>frmThongKe_ChungTuLienQuan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmDanhSachXacNhanNhapThanhPham.resx">
+      <DependentUpon>frmDanhSachXacNhanNhapThanhPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_TonChiTietMaVach.resx">
+      <DependentUpon>frmThongKe_TonChiTietMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTietChungTuBase.resx">
+      <DependentUpon>frmChiTietChungTuBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTietChungTuNhapNcc.resx">
+      <DependentUpon>frmChiTietChungTuNhapNcc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTietNhapThanhPham.resx">
+      <DependentUpon>frmChiTietNhapThanhPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTiet_ChungTuTraNCC.resx">
+      <DependentUpon>frmChiTiet_ChungTuTraNCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChungTuXuat_ChiTietHangHoa.resx">
+      <DependentUpon>frmChungTuXuat_ChiTietHangHoa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmDanhSachXuatLKSX.resx">
+      <DependentUpon>frmDanhSachXuatLKSX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmMaVachNhapThanhPhan.resx">
+      <DependentUpon>frmMaVachNhapThanhPhan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmThongKe_TonSanPham.resx">
+      <DependentUpon>frmThongKe_TonSanPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmTimKiemMaVach.resx">
+      <DependentUpon>frmTimKiemMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietMaVach.resx">
+      <DependentUpon>frm_ChiTietMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietPhieuDieuChuyen.resx">
+      <DependentUpon>frm_ChiTietPhieuDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietPhieuKiemKe.resx">
+      <DependentUpon>frm_ChiTietPhieuKiemKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietPhieuNhanDieuChuyen.resx">
+      <DependentUpon>frm_ChiTietPhieuNhanDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietXuatNoiBo.resx">
+      <DependentUpon>frm_ChiTietXuatNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachDeNghiNhanDieuChuyen.resx">
+      <DependentUpon>frm_DanhSachDeNghiNhanDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuDeNghiXuatTH.resx">
+      <DependentUpon>frm_DanhSachPhieuDeNghiXuatTH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachDeNghiDieuChuyen.resx">
+      <DependentUpon>frm_DanhSachDeNghiDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachDieuChuyen.resx">
+      <DependentUpon>frm_DanhSachDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuKiemKe.resx">
+      <DependentUpon>frm_DanhSachPhieuKiemKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuNhanDieuChuyen.resx">
+      <DependentUpon>frm_DanhSachPhieuNhanDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuNhapNoiBo.resx">
+      <DependentUpon>frm_DanhSachPhieuNhapNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuXuatNoiBo.resx">
+      <DependentUpon>frm_DanhSachPhieuXuatNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_DanhSachPhieuXuatTieuHao.resx">
+      <DependentUpon>frm_DanhSachPhieuXuatTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDeNghiDieuChuyen.resx">
+      <DependentUpon>frm_PhieuDeNghiDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ListChungTuTraNCC.resx">
+      <DependentUpon>frm_ListChungTuTraNCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_HangNhapChuaCoTrongOracle.resx">
+      <DependentUpon>frmBC_HangNhapChuaCoTrongOracle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_InHDPhieu.resx">
+      <DependentUpon>frmBC_InHDPhieu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_KiemKeKho.resx">
+      <DependentUpon>frmBC_KiemKeKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_LietKeChiTietGiaoDichNhap.resx">
+      <DependentUpon>frmBC_LietKeChiTietGiaoDichNhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_PhieuNhapChuaDuChiTiet.resx">
+      <DependentUpon>frmBC_PhieuNhapChuaDuChiTiet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmBC_TonDauKy.resx">
+      <DependentUpon>frmBC_TonDauKy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmCapNhatTonDauKy.resx">
+      <DependentUpon>frmCapNhatTonDauKy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmCapNhatTonDauKy_ChiTietHangHoa.resx">
+      <DependentUpon>frmCapNhatTonDauKy_ChiTietHangHoa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmCapNhatTonDauKy_SanPhamChuaMaVach.resx">
+      <DependentUpon>frmCapNhatTonDauKy_SanPhamChuaMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChiTiet_ChungTuNhapBase.resx">
+      <DependentUpon>frmChiTiet_ChungTuNhapBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmChungTuNhap_ChiTietHangHoaBase.resx">
+      <DependentUpon>frmChungTuNhap_ChiTietHangHoaBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuKiemKeKho.resx">
+      <DependentUpon>frmPhieuKiemKeKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuNhapLai_LuaChonIn.resx">
+      <DependentUpon>frmPhieuNhapLai_LuaChonIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuNhapTraLai.resx">
+      <DependentUpon>frmPhieuNhapTraLai.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop.resx">
+      <DependentUpon>frmPhieuNhapTraLaiXuatGop.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop_ChonChungTu.resx">
+      <DependentUpon>frmPhieuNhapTraLaiXuatGop_ChonChungTu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuNhapTraLaiXuatGop_LuaChonIn.resx">
+      <DependentUpon>frmPhieuNhapTraLaiXuatGop_LuaChonIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuNhapTraLai_ChonPhieuXuat.resx">
+      <DependentUpon>frmPhieuNhapTraLai_ChonPhieuXuat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuat.resx">
+      <DependentUpon>frmPhieuXuat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuatHang.resx">
+      <DependentUpon>frmPhieuXuatHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuatHangEmei.resx">
+      <DependentUpon>frmPhieuXuatHangEmei.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuatHangEmei_ChonMaVach.resx">
+      <DependentUpon>frmPhieuXuatHangEmei_ChonMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuatHoaDon.resx">
+      <DependentUpon>frmPhieuXuatHoaDon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuatHoaDon_ChonChietKhau.resx">
+      <DependentUpon>frmPhieuXuatHoaDon_ChonChietKhau.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuatHoaDon_ChonKyHieu.resx">
+      <DependentUpon>frmPhieuXuatHoaDon_ChonKyHieu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuatKhac.resx">
+      <DependentUpon>frmPhieuXuatKhac.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuat_ChonKhuyenMai.resx">
+      <DependentUpon>frmPhieuXuat_ChonKhuyenMai.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuat_ChuyenKhoan.resx">
+      <DependentUpon>frmPhieuXuat_ChuyenKhoan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuat_LuaChonIn.resx">
+      <DependentUpon>frmPhieuXuat_LuaChonIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmPhieuXuat_TraTienThua.resx">
+      <DependentUpon>frmPhieuXuat_TraTienThua.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmTimPhieuXuat.resx">
+      <DependentUpon>frmTimPhieuXuat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmXuatGopHoaDon.resx">
+      <DependentUpon>frmXuatGopHoaDon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmXuatGopHoaDon_ChiTiet.resx">
+      <DependentUpon>frmXuatGopHoaDon_ChiTiet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frmXuatGopHoaDon_XemChiTiet.resx">
+      <DependentUpon>frmXuatGopHoaDon_XemChiTiet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoNhapHang.resx">
+      <DependentUpon>frm_BaoCaoNhapHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_BaoCaoTonKho.resx">
+      <DependentUpon>frm_BaoCaoTonKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChungTuNhap.resx">
+      <DependentUpon>frm_ChungTuNhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_InMaVach.resx">
+      <DependentUpon>frm_InMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_KiemKeKho.resx">
+      <DependentUpon>frm_KiemKeKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ListChungTuNhap.resx">
+      <DependentUpon>frm_ListChungTuNhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDeNghiNhanDieuChuyen.resx">
+      <DependentUpon>frm_PhieuDeNghiNhanDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDeNghiXuatTieuHao.resx">
+      <DependentUpon>frm_PhieuDeNghiXuatTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuDieuChuyen.resx">
+      <DependentUpon>frm_PhieuDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuNhanDieuChuyen.resx">
+      <DependentUpon>frm_PhieuNhanDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuNhapNoiBo.resx">
+      <DependentUpon>frm_PhieuNhapNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuXuatNoiBo.resx">
+      <DependentUpon>frm_PhieuXuatNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuXuatTieuHao.resx">
+      <DependentUpon>frm_PhieuXuatTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_PhieuXuatTieuHaoNew.resx">
+      <DependentUpon>frm_PhieuXuatTieuHaoNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_ChiTietTongHopKiemKe.resx">
+      <DependentUpon>frm_ChiTietTongHopKiemKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\frm_XuatHuyTieuHao.resx">
+      <DependentUpon>frm_XuatHuyTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_HoaDonGiaTriGiaTangNew.resx">
+      <DependentUpon>rpt_HoaDonGiaTriGiaTangNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraHangNCC_TH.resx">
+      <DependentUpon>rpt_BC_PhieuTraHangNCC_TH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuKiemKe.resx">
+      <DependentUpon>rpt_BC_PhieuKiemKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA75.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA75.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA65.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA65.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Single.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA7Single.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Single.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA6Single.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5Single.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA5Single.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Detailnew.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA6Detailnew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6new.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA6new.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\frmChonBaoCao.resx">
+      <DependentUpon>frmChonBaoCao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapHangMuaTongHop.resx">
+      <DependentUpon>rpt_BC_PhieuNhapHangMuaTongHop.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiNhapTieuHao.resx">
+      <DependentUpon>rpt_BC_PhieuDeNghiNhapTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptInPhieuBHSX.resx">
+      <DependentUpon>rptInPhieuBHSX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptInPhieuBH.resx">
+      <DependentUpon>rptInPhieuBH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuTachThanhPhamSX.resx">
+      <DependentUpon>rpt_BC_PhieuTachThanhPhamSX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5Detail.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA5Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6Detail.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA6Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraLaiHang.resx">
+      <DependentUpon>rpt_BC_PhieuTraLaiHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Sub.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA7Sub.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA6.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA6.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA5.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA5.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\frmBangGiaReport.resx">
+      <DependentUpon>frmBangGiaReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\frmHoaDonGTGTreport.resx">
+      <DependentUpon>frmHoaDonGTGTreport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\frmPhieuThureport.resx">
+      <DependentUpon>frmPhieuThureport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\frmPhieuXuatKhoReport.resx">
+      <DependentUpon>frmPhieuXuatKhoReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptBCKiemKeKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBCKiemKeKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptBC_HangNhapChuaCoTrongOracle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBC_HangNhapChuaCoTrongOracle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptBC_LietKeChiTietNhapHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBC_LietKeChiTietNhapHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptBC_TonDauKy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBC_TonDauKy.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptHoaDonBan_1011.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHoaDonBan_1011.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuNhapKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuNhapKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuNhapLai.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuNhapLai.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuNhapLai_IEMI.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuNhapLai_IEMI.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuThu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuThu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuXuat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuXuat.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuXuatKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuXuatKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuXuat_IEMI.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuXuat_IEMI.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuXuat_IEMI_TKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuXuat_IEMI_TKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rptPhieuXuat_TKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuXuat_TKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BangGia.resx">
+      <DependentUpon>rpt_BangGia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NhapHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_BC_NhapHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_NoteSanPhamA7Detail.resx">
+      <DependentUpon>rpt_BC_NoteSanPhamA7Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiNhanDieuChuyen.resx">
+      <DependentUpon>rpt_BC_PhieuDeNghiNhanDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiXuatDieuChuyen.resx">
+      <DependentUpon>rpt_BC_PhieuDeNghiXuatDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuDeNghiXuatTieuHao.resx">
+      <DependentUpon>rpt_BC_PhieuDeNghiXuatTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuDieuChuyen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_BC_PhieuDieuChuyen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhanDieuChuyen.resx">
+      <DependentUpon>rpt_BC_PhieuNhanDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapChuaDuChiTiet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_BC_PhieuNhapChuaDuChiTiet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapHangMuaNCC.resx">
+      <DependentUpon>rpt_BC_PhieuNhapHangMuaNCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapNoiBo.resx">
+      <DependentUpon>rpt_BC_PhieuNhapNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuNhapThanhPham.resx">
+      <DependentUpon>rpt_BC_PhieuNhapThanhPham.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuPhanCongGiaoNhan.resx">
+      <DependentUpon>rpt_BC_PhieuPhanCongGiaoNhan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuThu.resx">
+      <DependentUpon>rpt_BC_PhieuThu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuTraHangNCC.resx">
+      <DependentUpon>rpt_BC_PhieuTraHangNCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatDieuChuyen.resx">
+      <DependentUpon>rpt_BC_PhieuXuatDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatKho.resx">
+      <DependentUpon>rpt_BC_PhieuXuatKho.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatLK.resx">
+      <DependentUpon>rpt_BC_PhieuXuatLK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatNoiBo.resx">
+      <DependentUpon>rpt_BC_PhieuXuatNoiBo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_PhieuXuatTieuHao.resx">
+      <DependentUpon>rpt_BC_PhieuXuatTieuHao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_TongHopTonKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_BC_TongHopTonKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BC_XuatHuyTieuHao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_BC_XuatHuyTieuHao.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_HoaDonDieuChuyenGTGT.resx">
+      <DependentUpon>rpt_HoaDonDieuChuyenGTGT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_HoaDonGiaTriGiaTang.resx">
+      <DependentUpon>rpt_HoaDonGiaTriGiaTang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_HoaDonGTGT.resx">
+      <DependentUpon>rpt_HoaDonGTGT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_BangKeHoaDonGTGT.resx">
+      <DependentUpon>rpt_BangKeHoaDonGTGT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\Reports\rpt_InMaVachSP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_InMaVachSP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\TestPhieuBH.resx">
+      <DependentUpon>TestPhieuBH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuDeNghiXuatDieuChuyen.resx">
+      <DependentUpon>frm_DanhSachPhieuDeNghiXuatDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuDeNghiNhapDieuChuyen.resx">
+      <DependentUpon>frm_DanhSachPhieuDeNghiNhapDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuXuatDieuChuyen.resx">
+      <DependentUpon>frm_DanhSachPhieuXuatDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_DanhSachPhieuNhapDieuChuyen.resx">
+      <DependentUpon>frm_DanhSachPhieuNhapDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_DieuChuyenKhoBase.resx">
+      <DependentUpon>frm_DieuChuyenKhoBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_PhieuDeNghiNhapDieuChuyen.resx">
+      <DependentUpon>frm_PhieuDeNghiNhapDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_PhieuDeNghiXuatDieuChuyen.resx">
+      <DependentUpon>frm_PhieuDeNghiXuatDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_PhieuNhapDieuChuyen.resx">
+      <DependentUpon>frm_PhieuNhapDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\KhoHang\DieuChuyenKho\frm_PhieuXuatDieuChuyen.resx">
+      <DependentUpon>frm_PhieuXuatDieuChuyen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.BangGiaReportInfo.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.BaoCao_ChiTietDCInfor.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.BaoCao_ChiTietInfor.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.BaoCao_ChiTietXTHInfor.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.BaoCao_PhieuNhapMuaNCCInfor.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.ChungTuNhapNccChiTietHangHoaInfo.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.ChungTu_ChiTietHangHoaBaseInfo.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.HoaDonGTGT_ChiTietInfo.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.InPhieuKiemKeInfor.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.KiemKeChiTietHangHoaInfor.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.NoteSanPhamReportInfor.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.NoteSanPhamReportInfor1.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.PhieuThu_ChiTietInfo.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.PhieuXuatKho_ChiTietInfo.datasource" />
+    <None Include="Properties\DataSources\QLBanHang.Modules.KhoHang.Infors.TestHoaDonGTGTInfo.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\KhoHang\Bussiness\Base\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "$(ProjectDir)..\..\..\QLBH.Documents\References\TranAnh\KhoHang\$(TargetFileName)"
+</PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
